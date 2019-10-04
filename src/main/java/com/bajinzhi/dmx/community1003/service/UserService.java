@@ -22,5 +22,9 @@ public class UserService {
     }
 
 
+    public User findUserByToken(String token){
+        return userMapper.findUserByToken(token);
+    }
+
 
 }
