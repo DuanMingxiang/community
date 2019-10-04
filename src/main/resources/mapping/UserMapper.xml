@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bajinzhi.dmx.community1003.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.bajinzhi.dmx.community1003.model.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="account_id" jdbcType="VARCHAR" property="accountId" />
+        <result column="token" jdbcType="CHAR" property="token" />
+        <result column="gmt_create" jdbcType="BIGINT" property="gmtCreate" />
+        <result column="gmt_modified" jdbcType="BIGINT" property="gmtModified" />
+    </resultMap>
+
+    <select id="insertUser" parameterType="com.bajinzhi.dmx.community1003.model.User">
+        insert into user (name,account_id,token,gmt_create,gmt_modified) values (#{name},#{accountId},#{token},#{gmtCreate},#{gmtModified})
+    </select>
+
+</mapper>
