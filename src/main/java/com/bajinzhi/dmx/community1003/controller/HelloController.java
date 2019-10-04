@@ -22,7 +22,7 @@ public class HelloController {
         System.out.println("11111111111111111111111");
         model.addAttribute("name",name);
         System.out.println("name :" + name);
-        return  "hello1";
+        return  "hello";
     }
 
 
